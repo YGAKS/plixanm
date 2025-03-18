@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60">
+    <title>PLIXNIMEKU! - informasi.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; user-select: none; }
+        body { background-color: #222; color: #ccc; padding: 10px; padding-top: 60px; text-align: center; }
+
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; display: flex; background-color: #222; color: #fff; align-items: center; justify-content: space-between; padding: 0 10px; z-index: 100; }
+        .navbar .title { font-size: 18px; font-weight: bold; }
+        .navbar .title .blue-text { color: #78a3c3; }
+        .navbar .menu { font-size: 24px; cursor: pointer; }
+
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .card { background: #2A2E37; padding: 15px; border-radius: 8px; text-align: left; }
+
+        .card h3 { color: #fff; margin-bottom: 10px; display: flex; align-items: center; gap: 5px; border-left: 3px solid #78a3c3; padding-left: 3px; }
+        .card p { font-size: 14px; color: #ccc; margin-bottom: 10px; }
+        .card a { color: #FFD700; text-decoration: none; font-weight: bold; }
+        
+        .rules-list { border-left: 3px solid #FFD700; padding-left: 10px; margin-top: 10px; }
+        .rule-item { display: flex; align-items: center; gap: 10px; padding: 5px 0; border-bottom: 1px solid #444; }
+        .rule-item:last-child { border-bottom: none; }
+        .rule-item i { color: #FFD700; font-size: 20px; }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">PLIXN<span class="blue-text">IMEKU!</span></div>
+        <span class="menu material-icons" onclick="goToWatchPage('https://plixsmp.my.id/')">dashboard</span>
+    </div>
+
+    <div class="grid-container">
+        <div class="card">
+            <h3>INFORMASI</h3>
+            <p>PLIXNIMEKU adalah platform yang menyediakan daftar anime sub indo individu anak sekolah.  
+            Kami berkomitmen untuk memberikan kenyaman untuk member plix penonton.</p>
+            <p>Dengan antarmuka yang sederhana dan mudah digunakan, kami berharap para pengguna mensupport kami dari 0.</p>
+        </div>
+
+        <div class="card">
+            <h3>PERATURAN</h3>
+            <div class="rules-list">
+                <div class="rule-item"><i class="material-icons">check_circle</i> Hormati semua anggota komunitas.</div>
+                <div class="rule-item"><i class="material-icons">block</i> Dilarang menyebarkan spoiler tanpa peringatan.</div>
+                <div class="rule-item"><i class="material-icons">security</i> Tidak diperbolehkan spam atau promosi tanpa izin dan jangan toxic.</div>
+                <div class="rule-item"><i class="material-icons">campaign</i> Kami sangat senang jika anda mensupport kami.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>KOMUNITAS</h3>
+            <p>Bergabunglah dengan komunitas kami untuk berdiskusi tentang anime terbaru, berbagi rekomendasi, dan terhubung dengan sesama penggemar.</p>
+            <p>Kami memiliki server Discord di mana kamu bisa ngobrol santai, mengikuti event, dan mendapatkan informasi terbaru.</p>
+            <a href="https://discord.gg/j9f8FfUXf6" target="_blank">Gabung Discord Kami...</a>
+        </div>
+    </div>
+
+    <script>
+        function goToWatchPage(url) { window.location.href = url; }
+    </script>
+</body>
+</html>
