@@ -3,24 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5">
-    <title>404 - kuru kuru halaman belum tersedia atau tidak ada</title>
+    <meta http-equiv="refresh" content="30">
+    <title>PLIXNIMEKU! - list series anime.</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;user-select:none}body{background:#222;color:#fff;text-align:center;padding:10px;padding-top:60px}.navbar{position:fixed;top:0;left:0;width:100%;height:60px;display:flex;background:#222;color:#fff;align-items:center;justify-content:space-between;padding:0 10px;z-index:100}.navbar .title{font-size:18px;font-weight:bold}.navbar .title .blue-text{color:#78a3c3}.navbar .menu{font-size:24px;transition:.3s}.error-container{max-width:600px;margin:100px auto 0}.error-text{font-size:16px;margin-bottom:20px}.anime-thumbnail{width:150px;height:auto;margin-bottom:20px}.btn-home{display:inline-block;padding:10px 20px;background:#78a3c3;color:#fff;text-decoration:none;border-radius:5px;font-weight:bold;transition:.3s}.anime-thumbnail{pointer-events:none;-webkit-user-drag:none;}
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            user-select: none;
+        }
+
+        body {
+            background-color: #222222;
+            color: white;
+            padding: 10px;
+            padding-top: 60px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            background-color: #222222;
+            color: #FFF;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            z-index: 100;
+        }
+
+        .navbar .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .navbar .title .blue-text {
+            color: #78a3c3;
+        }
+
+        .navbar .menu {
+            font-size: 24px;
+            transition: 0.3s;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background: #333;
+            border-radius: 16px;
+            padding: 5px 10px;
+            margin: 0 auto 10px;
+        }
+
+        .search-container input {
+            border: none;
+            outline: none;
+            background: transparent;
+            color: #666;
+            padding: 5px;
+            padding-left: 10px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .search-container .search-icon {
+            color: #666;
+        }
+        
+        .anime-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+            overflow: hidden;
+            justify-content: left;
+            margin-bottom: 10px;
+        }
+        
+        .anime-item {
+            position: relative;
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 0 0 6px 6px;
+            background-color: #2A2E37;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 110px;
+            width: 100px;
+            height: auto;
+            overflow: hidden;
+        }
+        
+        .anime-item img {
+            height: 140px;
+            width: 100%;
+            object-fit: cover;
+            background: linear-gradient(90deg, #2A2E37 20%, #454A55 50%, #2A2E37 80%);
+            background-size: 200% 100%;
+            animation: slideLight 2s linear infinite;
+        }
+        
+        .anime-title {
+            font-size: 12px;
+            font-weight: bold;
+            color: #fff;
+            max-width: 100%;
+            white-space: nowrap;
+            padding: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .anime-item .status-overlay {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(34, 34, 34, 1), rgba(0, 0, 0, 0));
+            color: #ccc;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 5px 5px 30px 5px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="navbar">
         <div class="title">PLIXN<span class="blue-text">IMEKU!</span></div>
-        <span class="menu material-icons" onclick="goToWatchPage('info')">info_outline</span>
+        <span class="menu material-icons" onclick="goToWatchPage('https://plixsmp.my.id/info')">info_outline</span>
     </div>
-    <div class="error-container">
-        <img class="anime-thumbnail" src="https://media.tenor.com/0bNCyjlohGQAAAAi/honkai-star-rail-hsr.gif" alt="Error Anime">
-        <div class="error-text">kuru kuru! Halaman sedang perbaikan atau tidak ada! resfreh untuk mengecek.</div>
-        <br>
-        <a href="index.html" class="btn-home">Kembali ke Beranda</a>
-    </div><script>function goToWatchPage(url){window.location.href=url;}</script>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Coming soon fitur....">
+        <span class="search-icon material-icons" onclick="searchAnime()">search</span>
+    </div>
+    <div class="anime-list">
+        <div class="anime-item" onclick="goToWatchPage('https://plixsmp.my.id/anime/kuroiwa.html')">
+            <div class="status-overlay">Releasing eps 1-11</div>
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx177552-JPx2rIXeprne.jpg" alt="Anime 1">
+            <div class="anime-title">Kuroiwa Medaka ni Watashi no Kawaii ga Tsuujinai</div>
+        </div>
+
+        <div class="anime-item" onclick="goToWatchPage('https://plixsmp.my.id/anime/kiminokoto.html')">
+            <div class="status-overlay">Releasing eps 1-10</div>
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx172258-CFvhqor0blLV.jpg" alt="Anime 2">
+            <div class="anime-title">Kimi no Koto ga Dai Dai Dai Dai Daisuki na 100-nin no Kanojo 2nd Season</div>
+        </div>
+
+        <div class="anime-item" onclick="goToWatchPage('https://plixsmp.my.id/anime/honeylemonsoda.html')">
+            <div class="status-overlay">Releasing eps 1-10</div>
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx175443-yeamxYxCwLSe.jpg" alt="Anime 3">
+            <div class="anime-title">Honey Lemon Soda</div>
+        </div>
+
+        <div class="anime-item" onclick="goToWatchPage('https://plixsmp.my.id/anime/hanawasaku.html')">
+            <div class="status-overlay">Releasing eps 1-10</div>
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx178022-gB3zAfazGBJ6.jpg" alt="Anime 4">
+            <div class="anime-title">Hana wa Saku, Shura no Gotoku</div>
+        </div>
+
+        <div class="anime-item" onclick="goToWatchPage('https://plixsmp.my.id/anime/sakamotodays.html')">
+            <div class="status-overlay">Finish eps 1-11</div>
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx177709-jBQ965JZG0l8.png" alt="Anime 5">
+            <div class="anime-title">SAKAMOTO DAYS</div>
+        </div>
+
+        <div class="anime-item" onclick="goToWatchPage('https://plixsmp.my.id/anime/kusuriyano.html')">
+            <div class="status-overlay">Releasing eps 1-10</div>
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx161645-bX5S28Cc1Nnk.jpg" alt="Anime 6">
+            <div class="anime-title">Kusuriya no Hitorigoto</div>
+        </div>
+        
+        <div class="anime-item" onclick="goToWatchPage('https://plixsmp.my.id/anime/classnodaikirai.html')">
+            <div class="status-overlay">Releasing eps 1-11</div>
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx178462-YW6BgSGGP4az.jpg" alt="Anime 7">
+            <div class="anime-title">Class no Daikirai na Joshi to Kekkon Suru Koto ni Natta</div>
+        </div>
+        
+        <div class="anime-item" onclick="goToWatchPage('https://plixsmp.my.id/anime/zenshuu.html')">
+            <div class="status-overlay">Releasing eps 1-11</div>
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176273-whKlFCswinEm.jpg" alt="Anime 8">
+            <div class="anime-title">Zenshuu</div>
+        </div>
+        
+        <div class="anime-item" onclick="goToWatchPage('https://plixsmp.my.id/anime/guildnouketsukejou.html')">
+            <div class="status-overlay">Releasing eps 1-10</div>
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx167143-SoFo5kOvlkbO.jpg" alt="Anime 9">
+            <div class="anime-title">Guild no Uketsukejou desu ga, Zangyou wa Iya nanode Boss wo Solo Toubatsu Shiyou to Omoimasu</div>
+        </div>
+        
+        <div class="anime-item" onclick="goToWatchPage('https://plixsmp.my.id/anime/amekutakaono.html')">
+            <div class="status-overlay">Releasing eps 1-10</div>
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176642-lgDtPlodCMRm.jpg" alt="Anime 10">
+            <div class="anime-title">Ameku Takao no Suiri Karte</div>
+        </div>
+        
+        <div class="anime-item" onclick="goToWatchPage('https://plixsmp.my.id/anime/nihoneyoukoso.html')">
+            <div class="status-overlay">Releasing eps 1-11</div>
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx172439-sTda7baXB0Fh.jpg" alt="Anime 11">
+            <div class="anime-title">Nihon e Youkoso Elf-san</div>
+        </div>
+        
+        <div class="anime-item" onclick="goToWatchPage('https://plixsmp.my.id/anime/extrapart.html')">
+            <div class="status-overlay">Finish eps ova</div>
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx136381-t6c5rfKjnqqd.jpg" alt="Anime 12">
+            <div class="anime-title">SK∞ Extra Part</div>
+        </div>
+    </div>
+    <script>function goToWatchPage(url){window.location.href=url;}</script>
 </body>
 </html>
