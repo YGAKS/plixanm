@@ -27,7 +27,6 @@
             padding-top: 60px;
         }
 
-        /* Navbar */
         .navbar {
             position: fixed;
             top: 0;
@@ -46,6 +45,10 @@
         .navbar .title {
             font-size: 18px;
             font-weight: bold;
+        }
+        
+        .navbar .title .blue-text {
+            color: #78a3c3;
         }
 
         .navbar .menu {
@@ -161,8 +164,8 @@
 
     <!-- Navbar -->
     <div class="navbar">
-        <div class="title">PLIXANIMEON</div>
-        <span class="menu material-icons">info_outline</span>
+        <div class="title">PLIXN<span class="blue-text">IMEKU!</span></div>
+        <span class="menu material-icons" onclick="goToWatchPage('info')">info_outline</span>
     </div>
     <!-- Video Player -->
     <div class="video-container">
@@ -189,5 +192,6 @@
             </div>
         </div>
     </div>
+    <script>function goToWatchPage(url){window.location.href=url;}</script>
 </body>
 </html>
