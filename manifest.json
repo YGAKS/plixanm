@@ -1,7 +1,7 @@
 {
   "name": "PLIXNIMEKU",
   "short_name": "PLIXNIMEKU",
-  "start_url": "https://plixsmp.my.id/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#222",
   "theme_color": "#222",
