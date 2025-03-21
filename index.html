@@ -141,21 +141,10 @@
             max-width: 110px;
             width: 100px;
             overflow: hidden;
-            opacity: 0;
-            transform: translateY(10px);
-            animation: fadeInScale 0.5s ease-out forwards;
+            background: linear-gradient(90deg, #2A2E37 20%, #454A55 50%, #2A2E37 80%);
+            background-size: 200% 100%;
+            animation: slideLight 2s linear infinite;
         }
-        
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
         
         .anime-item img {
             height: 140px;
@@ -163,8 +152,23 @@
             object-fit: cover;
             background: linear-gradient(90deg, #2A2E37 20%, #454A55 50%, #2A2E37 80%);
             background-size: 200% 100%;
-            animation: slideLight 2s linear infinite;
+            animation: slideLight 0.5s linear infinite;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+      
+        .anime-item img, .anime-title, .stats-container {
+            opacity: 0;
+            transform: translateY(5px);
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+         }
+         
         .anime-title {
             font-size: 12px;
             font-weight: bold;
@@ -187,6 +191,7 @@
             font-size: 10px;
             font-weight: bold;
             padding: 5px 5px 30px;
+            z-index: 100;
         }
         
         .stats {
@@ -347,14 +352,8 @@ function filterAnime(a,b){
     b.classList.add("active");
 }
 document.addEventListener("DOMContentLoaded",()=>document.querySelector(".category-list a").click());
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    let items = document.querySelectorAll(".anime-item");
-    items.forEach((item, index) => {
-        item.style.animationDelay = `${index * 0.1}s`;
-    });
-});
+</script><script>
+document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelectorAll(".anime-item"),t=new IntersectionObserver(t=>{t.forEach((t,n)=>{if(t.isIntersecting){let i=.15*n;t.target.style.opacity="1",t.target.style.transform="translateY(0)",t.target.style.transitionDelay=i+"s";let o=t.target.querySelector("img"),r=t.target.querySelector(".anime-title"),a=t.target.querySelector(".stats-container");setTimeout(()=>{o.style.opacity="1",o.style.transform="translateY(0)"},1e3*(i+.3)),setTimeout(()=>{a.style.opacity="1",a.style.transform="translateY(0)"},1e3*(i+.5)),setTimeout(()=>{r.style.opacity="1",r.style.transform="translateY(0)"},1e3*(i+.7))}})},{threshold:.2});e.forEach(e=>t.observe(e))});
 </script>
 </body>
 </html>
