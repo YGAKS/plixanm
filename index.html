@@ -1,144 +1,360 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google" content="notranslate">
-<html translate="no">
-<meta http-equiv="refresh" content="30">
-<title>PLIXNIMEKU! - nonton anime sub indo</title>
-<meta name="description" content="PLIXNIMEKU! webs nonton anime individu sub indo terbaru!.">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<style>html{scroll-behavior:smooth}*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;user-select:none}body{background-color:#222;color:#fff;padding:10px;padding-top:60px}.navbar{position:fixed;top:0;left:0;width:100%;height:60px;display:flex;background:#222;color:#fff;align-items:center;justify-content:space-between;padding:0 10px;z-index:100}.navbar .title{font-size:18px;font-weight:bold}.navbar .title .blue-text{color:#78a3c3}.navbar .menu{font-size:24px;transition:.3s}.hero{position:relative;width:100%;height:50vh;max-height:300px;background:url('https://img.freepik.com/free-photo/anime-style-character-space_23-2151133896.jpg?t=st=1742402140~exp=1742405740~hmac=2ffe2e1a1c11d5bdca02c6811e78497dd073805912da7536914f14e662bb695c&w=740') no-repeat center/cover;display:flex;align-items:center;justify-content:center;color:#fff;overflow:hidden;margin-bottom:10px;border-radius:6px}.hero::before,.hero::after{content:"";position:absolute;left:0;width:100%}.hero::before{top:0;height:100%;background:linear-gradient(to bottom,#222,rgba(34,34,34,0))}.hero::after{bottom:0;height:50%;background:linear-gradient(to top,#222,rgba(34,34,34,0))}.hero-content{position:relative;z-index:2;padding:10px}.hero-title{font-size:24px;font-weight:bold;margin-bottom:10px}.hero-desc{font-size:14px;max-width:500px;opacity:.9}.hero-btn{margin-top:15px;padding:10px 20px;background:#78a3c3;font-weight:bold;color:#fff;border:none;border-radius:5px;transition:.3s;font-size:14px}.category-container-title{display:flex;align-items:center;width:100%;padding:10px 0}.category-title{font-size:20px;font-weight:bold;color:rgba(255,255,255,.8);white-space:nowrap}.line{flex-grow:1;height:1px;background:rgba(255,255,255,.4);margin:0 10px}.view-all{font-size:15px;color:rgba(255,255,255,.4);white-space:nowrap}@keyframes slideLight{0%{background-position:-100% 0}100%{background-position:100% 0}}.anime-list{display:flex;flex-wrap:wrap;gap:10px;width:100%;overflow:hidden;justify-content:left;margin-bottom:10px}.anime-item{position:relative;display:flex;flex-grow:1;flex-direction:column;align-items:center;border-radius:0 0 6px 6px;background:#2A2E37;box-shadow:0 2px 5px rgba(0,0,0,.1);max-width:110px;width:100px;overflow:hidden}.anime-item img{height:140px;width:100%;object-fit:cover;background:linear-gradient(90deg,#2A2E37 20%,#454A55 50%,#2A2E37 80%);background-size:200% 100%;animation:slideLight 2s linear infinite}.anime-title{font-size:12px;font-weight:bold;color:#fff;max-width:100%;white-space:nowrap;padding:5px;overflow:hidden;text-overflow:ellipsis}.anime-item .status-overlay{position:absolute;top:0;width:100%;background:linear-gradient(to bottom,#222,rgba(0,0,0,0));color:#ccc;font-size:10px;font-weight:bold;padding:5px 5px 30px;text-align:center}.anime-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:10px}@media(min-width:600px){.anime-grid{grid-template-columns:1fr 1fr}}@media(min-width:900px){.anime-grid{grid-template-columns:1fr 1fr 1fr}}.anime-cardtop{display:flex;background:#2A2E37;border-radius:6px;overflow:hidden;padding:5px;align-items:center;position:relative}.anime-rank{position:absolute;left:0;top:0;font-size:14px;font-weight:bold;padding:5px 10px;border-radius:15px;color:#fff}.anime-rank.one{background:#66bb6a}.anime-rank.two{background:#ff7043}.anime-rank.three{background:#e53935}.anime-rank.default{background:#757575}.anime-cardtop img{width:70px;height:100px;object-fit:cover;border-radius:5px;background:linear-gradient(90deg,#2A2E37 20%,#454A55 50%,#2A2E37 80%);background-size:200% 100%;animation:slideLight 2s linear infinite}.anime-infotop{margin-left:15px;flex:1}.anime-titletop{font-size:14px;font-weight:bold;margin-bottom:5px}.anime-date{font-size:11px;margin-top:5px;color:#ddd}.anime-meta{font-size:12px;color:#bdbdbd;display:flex;flex-wrap:wrap;gap:5px}.anime-meta span{background:rgba(255,255,255,.1);padding:3px 8px;border-radius:5px;font-size:10px}.advertising-space{background:linear-gradient(110deg,#444 20%,#777 50%,#444 80%);background-size:200% 100%;animation:slideLight 2s linear infinite;padding:10px;font-size:12px;color:#bdbdbd;border-radius:6px;text-align:center}
-    </style></head>
-<body><div class="navbar"><div class="title">PLIXN<span class="blue-text">IMEKU!</span></div><span class="menu material-icons" onclick="goToWatchPage('info')">info_outline</span></div><div class="hero"><div class="hero-content"><div class="hero-title">SELAMAT DATANG KAWAN DI PLIXNIMEKU!</div><div class="hero-desc">website nonton anime gratis subs indo by plixteams individu kami menyediakan list of anime terbaru penacrian anime apa yang kamu sedang cari dan ingin menontonnya!.</div><div class="hero-btn" onclick="goToWatchPage('anime')">PENCARIAN ANIME...</div></div></div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <html translate="no">
+    <meta http-equiv="refresh" content="30">
+    <title>PLIXNIMEKU! - Nonton Anime Sub Indo</title>
+    <meta name="description" content="PLIXNIMEKU! web nonton anime sub indo terbaru!">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Styles -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            user-select: none;
+        }
+        body {
+            background-color: #1E1E1E;
+            color: #fff;
+            padding: 10px;
+            padding-top: 50px;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            background: #1E1E1E;
+            color: #fff;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            z-index: 100;
+        }
+        .navbar .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .navbar .title .blue-text {
+            color: #78a3c3;
+        }
+        .navbar .menu {
+            font-size: 24px;
+            transition: .3s;
+            cursor: pointer;
+        }
+        
+        .search-container {
+            display: flex;
+            align-items: center;
+            background: #333;
+            border-radius: 8px;
+            padding: 5px 10px;
+            margin: 10px 0;
+        }
+        
+        .search-container input {
+            border: none;
+            outline: none;
+            background: transparent;
+            color: #ccc;
+            padding: 5px 10px;
+            font-size: 14px;
+            width: 100%;
+        }
+    
+.category-list {
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    align-items: center;
+    width: 100%;
+    background-color: #333;
+    color: #ccc;
+    font-size: 14px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
 
-    <!-- Series Section -->
-    <div class="category-container-title">
-        <div class="category-title">TRENDING SEASON</div>
-        <div class="line"></div>
-        <div class="view-all" onclick="goToWatchPage('anime')">view all season</div>
+.category-list a {
+    color: #ccc;
+    cursor: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    white-space: nowrap;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-list a:not(:last-child) {
+    border-right: 2px solid #555;
+}
+
+.category-list a:hover {
+    color: white;
+}
+
+.category-list a.active {
+    background-color: #78a3c3;
+    color: white;
+}
+
+
+
+        @keyframes slideLight {
+            0% { background-position: -100% 0; }
+            100% { background-position: 100% 0; }
+        }
+        .anime-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+            overflow: hidden;
+            justify-content: left;
+            margin-bottom: 10px;
+        }
+        
+        .anime-item {
+            position: relative;
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 110px;
+            width: 100px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInScale 0.5s ease-out forwards;
+        }
+        
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+        
+        .anime-item img {
+            height: 140px;
+            width: 100%;
+            object-fit: cover;
+            background: linear-gradient(90deg, #2A2E37 20%, #454A55 50%, #2A2E37 80%);
+            background-size: 200% 100%;
+            animation: slideLight 2s linear infinite;
+        }
+        .anime-title {
+            font-size: 12px;
+            font-weight: bold;
+            color: #fff;
+            max-width: 100%;
+            white-space: nowrap;
+            padding: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .stats-container {
+            display: flex;
+            align-items: center;
+            color: #ccc;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(to bottom, #222, rgba(0, 0, 0, 0));
+            font-size: 10px;
+            font-weight: bold;
+            padding: 5px 5px 30px;
+        }
+        
+        .stats {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        .populer {
+            background-color: #28a745;
+        }
+        
+        .toprated {
+            background-color: #ffc107;
+        }
+        
+        .news {
+            background-color: #fd7e14;
+        }
+        
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #78a3c3;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        input[type="search"]::-webkit-search-cancel-button {
+            filter: brightness(0) invert(1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="title">PLIXN<span class="blue-text">IMEKU!</span></div>
+        <span class="menu material-icons" onclick="goToWatchPage('info')">info_outline</span>
     </div>
+    
+    <div class="search-container">
+    <input type="search" id="searchInput" placeholder="PENCARIAN MASUKAN JUDUL ANIME..." oninput="searchAnime()">
+</div>
+
+    <div class="category-list">
+    <a href="#" onclick="filterAnime('all', this)">ALL</a>
+    <a href="#" onclick="filterAnime('populer', this)">POPULER</a>
+    <a href="#" onclick="filterAnime('toprated', this)">TOP RATED</a>
+    <a href="#" onclick="filterAnime('news', this)">NEWS</a>
+</div>
     <div class="anime-list">
-        <div class="anime-item" onclick="goToWatchPage('anime/kuroiwa.html')">
-            <div class="status-overlay">Releasing eps 1-11</div>
+      
+        <div class="anime-item" onclick="goToWatchPage('anime/kuroiwa.html')"><div class="stats-container"><span class="stats news"></span>Ongoing 1-12</div>
             <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx177552-JPx2rIXeprne.jpg" alt="Anime 1">
             <div class="anime-title">Kuroiwa Medaka ni Watashi no Kawaii ga Tsuujinai</div>
         </div>
 
-        <div class="anime-item" onclick="goToWatchPage('anime/kiminokoto.html')">
-            <div class="status-overlay">Releasing eps 1-10</div>
+        <div class="anime-item" onclick="goToWatchPage('anime/kiminokoto.html')"><div class="stats-container"><span class="stats news"></span>Ongoing 1-12</div>
             <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx172258-CFvhqor0blLV.jpg" alt="Anime 2">
             <div class="anime-title">Kimi no Koto ga Dai Dai Dai Dai Daisuki na 100-nin no Kanojo 2nd Season</div>
         </div>
 
-        <div class="anime-item" onclick="goToWatchPage('anime/honeylemonsoda.html')">
-            <div class="status-overlay">Releasing eps 1-10</div>
+        <div class="anime-item" onclick="goToWatchPage('anime/honeylemonsoda.html')"><div class="stats-container"><span class="stats news"></span>Ongoing 1-12</div>
             <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx175443-yeamxYxCwLSe.jpg" alt="Anime 3">
             <div class="anime-title">Honey Lemon Soda</div>
         </div>
 
-        <div class="anime-item" onclick="goToWatchPage('anime/hanawasaku.html')">
-            <div class="status-overlay">Releasing eps 1-10</div>
+        <div class="anime-item" onclick="goToWatchPage('anime/hanawasaku.html')"><div class="stats-container"><span class="stats news"></span>Ongoing 1-12</div>
             <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx178022-gB3zAfazGBJ6.jpg" alt="Anime 4">
             <div class="anime-title">Hana wa Saku, Shura no Gotoku</div>
         </div>
 
-        <div class="anime-item" onclick="goToWatchPage('anime/sakamotodays.html')">
-            <div class="status-overlay">Finish eps 1-11</div>
+        <div class="anime-item" onclick="goToWatchPage('anime/sakamotodays.html')"><div class="stats-container"><span class="stats news"></span>Completed 1-11</div>
             <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx177709-jBQ965JZG0l8.png" alt="Anime 5">
             <div class="anime-title">SAKAMOTO DAYS</div>
         </div>
 
-        <div class="anime-item" onclick="goToWatchPage('anime/kusuriyano.html')">
-            <div class="status-overlay">Releasing eps 1-10</div>
+        <div class="anime-item" onclick="goToWatchPage('anime/kusuriyano.html')"><div class="stats-container"><span class="stats news"></span><span class="stats populer"></span>Ongoing 1-24</div>
             <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176301-AclxpmzlKoBM.jpg" alt="Anime 6">
             <div class="anime-title">Kusuriya no Hitorigoto</div>
         </div>
         
-        <div class="anime-item" onclick="goToWatchPage('anime/classnodaikirai.html')">
-            <div class="status-overlay">Releasing eps 1-11</div>
+        <div class="anime-item" onclick="goToWatchPage('anime/classnodaikirai.html')"><div class="stats-container"><span class="stats populer"></span>Completed 1-12</div>
             <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx178462-YW6BgSGGP4az.jpg" alt="Anime 7">
             <div class="anime-title">Class no Daikirai na Joshi to Kekkon Suru Koto ni Natta</div>
         </div>
         
-        <div class="anime-item" onclick="goToWatchPage('anime/zenshuu.html')">
-            <div class="status-overlay">Releasing eps 1-11</div>
+        <div class="anime-item" onclick="goToWatchPage('anime/zenshuu.html')"><div class="stats-container"><span class="stats news"></span></span>Ongoing 1-12</div>
             <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176273-whKlFCswinEm.jpg" alt="Anime 8">
             <div class="anime-title">Zenshuu</div>
         </div>
         
-        <div class="anime-item" onclick="goToWatchPage('anime/guildnouketsukejou.html')">
-            <div class="status-overlay">Releasing eps 1-10</div>
+        <div class="anime-item" onclick="goToWatchPage('anime/guildnouketsukejou.html')"><div class="stats-container"><span class="stats news"></span></span>Ongoing 1-12</div>
             <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx167143-SoFo5kOvlkbO.jpg" alt="Anime 9">
             <div class="anime-title">Guild no Uketsukejou desu ga, Zangyou wa Iya nanode Boss wo Solo Toubatsu Shiyou to Omoimasu</div>
         </div>
         
-        <div class="anime-item" onclick="goToWatchPage('anime/amekutakaono.html')">
-            <div class="status-overlay">Releasing eps 1-10</div>
+        <div class="anime-item" onclick="goToWatchPage('anime/amekutakaono.html')"><div class="stats-container"><span class="stats news"></span></span>Ongoing 1-12</div>
             <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176642-lgDtPlodCMRm.jpg" alt="Anime 10">
             <div class="anime-title">Ameku Takao no Suiri Karte</div>
         </div>
         
-        <div class="anime-item" onclick="goToWatchPage('anime/nihoneyoukoso.html')">
-            <div class="status-overlay">Releasing eps 1-11</div>
+        <div class="anime-item" onclick="goToWatchPage('anime/nihoneyoukoso.html')"><div class="stats-container"><span class="stats news"></span></span>Ongoing 1-12</div>
             <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx172439-sTda7baXB0Fh.jpg" alt="Anime 11">
             <div class="anime-title">Nihon e Youkoso Elf-san</div>
         </div>
         
-        <div class="anime-item" onclick="goToWatchPage('anime/extrapart.html')">
-            <div class="status-overlay">Finish eps ova</div>
+        <div class="anime-item" onclick="goToWatchPage('anime/extrapart.html')"><div class="stats-container"><span class="stats news"></span></span>Completed 1</div>
             <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx136381-t6c5rfKjnqqd.jpg" alt="Anime 12">
             <div class="anime-title">SK∞ Extra Part</div>
         </div>
     </div>
-
-    <!-- Movies Section -->
-    <div class="category-container-title">
-        <div class="category-title">POPULAR SEASON</div>
-        <div class="line"></div>
-        <div class="view-all">3 most popular</div>
+<div class="scroll-to-top" id="scrollTopBtn">
+        <span class="material-icons">arrow_upward</span>
     </div>
-    <div class="anime-grid">
-        <div class="anime-cardtop" onclick="goToWatchPage('anime/oredakelevelup.html')">
-            <div class="anime-rank one">#1</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176496-xCNtU4llsUpu.png" alt="Top1">
-            <div class="anime-infotop">
-                <div class="anime-titletop">Ore dake Level Up na Ken: Season 2 - Arise from the Shadow</div>
-                <div class="anime-meta">
-                    <span>Fantasy</span><span>Action</span><span>Adventure</span>
-                </div>
-                <div class="anime-date">Status: Releasing eps 1 -11. ~Jan 5, 2025</div>
-            </div>
-        </div>
+    <!-- JavaScript -->
+    <script>
+        function goToWatchPage(url) {
+            window.location.href = url;
+        }
+    </script><script>
+function goToWatchPage(a){window.location.href=a}
+function searchAnime(){
+    let a=document.getElementById("searchInput").value.toLowerCase(),
+        b=document.querySelectorAll(".anime-item");
+    b.forEach(b=>{let c=b.querySelector(".anime-title").textContent.toLowerCase();
+    b.style.display=c.includes(a)?"flex":"none"});
+    document.querySelectorAll(".category-list a").forEach(a=>a.classList.remove("active"));
+    document.querySelector(".category-list a").classList.add("active");
+}
+const scrollTopBtn=document.getElementById("scrollTopBtn");
+window.addEventListener("scroll",()=>{window.scrollY>300?scrollTopBtn.classList.add("show"):scrollTopBtn.classList.remove("show")});
+scrollTopBtn.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})});
 
-        <div class="anime-cardtop" onclick="goToWatchPage('anime/sakamotodays.html')">
-            <div class="anime-rank two">#2</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx177709-jBQ965JZG0l8.png" alt="Top2">
-            <div class="anime-infotop">
-                <div class="anime-titletop">SAKAMOTO DAYS</div>
-                <div class="anime-meta">
-                    <span>Comedy</span><span>Action</span>
-                </div>
-                <div class="anime-date">Status: Finish eps 1 - 11. ~Jan 11, 2025</div>
-            </div>
-        </div>
-
-        <div class="anime-cardtop" onclick="goToWatchPage('anime/kusuriyano.html')">
-            <div class="anime-rank three">#3</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176301-AclxpmzlKoBM.jpg" alt="Top3">
-            <div class="anime-infotop">
-                <div class="anime-titletop">Kusuriya no Hitorigoto 2nd Season</div>
-                <div class="anime-meta">
-                    <span>Drama</span>
-                    <span>Mystery</span>
-                </div>
-                <div class="anime-date">Status: Releasing eps 1 - 10. ~Jan 10, 2025</div>
-            </div>
-        </div>
-    </div>
-    
-<div class="advertising-space">® space sponsor for 15k/bulan :v</div><script>function goToWatchPage(url){window.location.href=url;}</script>
+function filterAnime(a,b){
+    document.querySelectorAll(".anime-item").forEach(c=>{
+        let d=null!==c.querySelector(`.stats.${a}`);
+        c.style.display="all"===a?"flex":d?"flex":"none"});
+    document.querySelectorAll(".category-list a").forEach(a=>a.classList.remove("active"));
+    b.classList.add("active");
+}
+document.addEventListener("DOMContentLoaded",()=>document.querySelector(".category-list a").click());
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    let items = document.querySelectorAll(".anime-item");
+    items.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.1}s`;
+    });
+});
+</script>
 </body>
 </html>
