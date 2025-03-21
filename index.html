@@ -163,10 +163,15 @@
             100% { opacity: 1; transform: translateY(0); }
         }
       
-        .anime-item img, .anime-title, .stats-container {
+        .anime-item img, .anime-title {
             opacity: 0;
             transform: translateY(5px);
             transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+         }
+         
+         .stats-container {
+           opacity: 0;
+           transition: opacity 0.8s ease-out;
          }
          
         .anime-title {
@@ -353,7 +358,7 @@ function filterAnime(a,b){
 }
 document.addEventListener("DOMContentLoaded",()=>document.querySelector(".category-list a").click());
 </script><script>
-document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelectorAll(".anime-item"),t=new IntersectionObserver(t=>{t.forEach((t,n)=>{if(t.isIntersecting){let i=.15*n;t.target.style.opacity="1",t.target.style.transform="translateY(0)",t.target.style.transitionDelay=i+"s";let o=t.target.querySelector("img"),r=t.target.querySelector(".anime-title"),a=t.target.querySelector(".stats-container");setTimeout(()=>{o.style.opacity="1",o.style.transform="translateY(0)"},1e3*(i+.3)),setTimeout(()=>{a.style.opacity="1",a.style.transform="translateY(0)"},1e3*(i+.5)),setTimeout(()=>{r.style.opacity="1",r.style.transform="translateY(0)"},1e3*(i+.7))}})},{threshold:.2});e.forEach(e=>t.observe(e))});
+document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelectorAll(".anime-item"),t=new IntersectionObserver(t=>{t.forEach((t,n)=>{if(t.isIntersecting){let i=.15*n;t.target.style.opacity="1",t.target.style.transform="translateY(0)",t.target.style.transitionDelay=i+"s";let o=t.target.querySelector("img"),r=t.target.querySelector(".anime-title"),a=t.target.querySelector(".stats-container");setTimeout(()=>{o.style.opacity="1",o.style.transform="translateY(0)"},1e3*(i+.3)),setTimeout(()=>{a.style.opacity="1"},1e3*(i+.5)),setTimeout(()=>{r.style.opacity="1",r.style.transform="translateY(0)"},1e3*(i+.7))}})},{threshold:.2});e.forEach(e=>t.observe(e))});
 </script>
 </body>
 </html>
