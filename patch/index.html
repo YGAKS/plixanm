@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <html translate="no">
+    <meta http-equiv="refresh" content="60">
+    <title>PLIXNIMEKU! - patch update.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; user-select: none; }
+        body { background-color: #222; color: #ccc; padding: 10px; padding-top: 60px; text-align: center; }
+
+        .navbar { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 60px; 
+            display: flex; background: #222; color: #fff; align-items: center; 
+            justify-content: space-between; padding: 0 10px; z-index: 100; 
+        }
+        .navbar .title { font-size: 20px; font-weight: bold; }
+        .navbar .title .blue-text { color: #78a3c3; }
+        .navbar-menu { display: flex; align-items: center; gap: 10px; }
+        .menu-item { 
+            display: flex; align-items: center; background: #333; 
+            padding: 8px 12px; border-radius: 8px; transition: background .3s; 
+        }
+        .menu-item:hover { background: #444; }
+        .separator { width: 2px; height: 16px; background: #555; margin: 0 6px; }
+        .menu-text { font-size: 13px; font-weight: bold; color: #ddd; }
+
+        /* GRID CONTAINER */
+        .grid-container { 
+            display: flex; 
+            flex-direction: column; 
+             width: 100%; 
+             margin: auto;
+             min-height: 100vh;
+        }
+        
+.date-label {
+    color: #555;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 30px;
+    position: relative;
+}
+
+.date-label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 50px;
+    background-color: #555;
+    border-radius: 2px;
+}
+
+        /* CARD */
+        .card { 
+            background: #333; padding: 15px; text-align: left; 
+            border-radius: 8px; position: relative; width: 100%;
+        }
+
+        .card h3 { 
+            color: #fff; padding-bottom: 5px; display: flex; align-items: center; 
+            gap: 5px; font-size: 16px; border-bottom: 1px solid #444; 
+        }
+        .patch-item { 
+            display: flex; align-items: center; gap: 10px; padding: 5px 0; 
+            border-bottom: 1px solid #444; font-size: 14px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">PLIXN<span class="blue-text">IMEKU!</span></div>
+        <div class="navbar-menu">
+            <div class="menu-item" onclick="goToWatchPage('info')">
+                <span class="menu-text">i</span>
+                <div class="separator"></div>
+                <span class="menu-text">INFO</span>
+            </div>
+            <div class="menu-item" onclick="goToWatchPage('/')">
+                <span class="menu-text"><</span>
+                <div class="separator"></div>
+                <span class="menu-text">HOME</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="date-label">-- 23 MARCH 2025</div>
+        <div class="card">
+            <h3><i class="material-icons">notifications_active</i> UPDATE WEBS</h3>
+            <div class="patch-item">PLIXNIMEKU update animasi dan tampilan v1.5 kami dapat menyesuaikan kembali nanti.</div>
+            <div class="patch-item">Dengan antarmuka yang sederhana dan mudah digunakan, kami berharap para pengguna mensupport kami dari 0.</div>
+        </div>
+      
+        <div class="date-label">-- 22 MARCH 2025</div>
+        <div class="card">
+            <h3><i class="material-icons">notifications_active</i> UPDATE WEBS</h3>
+            <div class="patch-item">PLIXNIMEKU update fitur search bar pencarian dan pilihan kategori populer - toprated - news untuk mancari anime dengan mudah.</div>
+            <div class="patch-item">Dengan antarmuka yang sederhana dan mudah digunakan, kami berharap para pengguna mensupport kami dari 0.</div>
+        </div>
+
+        <div class="date-label">-- 21 MARCH 2025</div>
+        <div class="card">
+            <h3><i class="material-icons">notifications_none</i> UPDATE ANIME</h3>
+            <div class="patch-item">• Kuroiwa Medaka ni Watashi no Kawaii ga Tsuujinai. • Kimi no Koto ga Dai Dai Dai Dai Daisuki na 100-nin no Kanojo 2nd Season. • Honey Lemon Soda. • Hana wa Saku, Shura no Gotoku. • SAKAMOTO DAYS. • Kusuriya no Hitorigoto. • Class no Daikirai na Joshi to Kekkon Suru Koto ni Natta. • Zenshuu • Guild no Uketsukejou desu ga, Zangyou wa Iya nanode Boss wo Solo Toubatsu Shiyou to Omoimasu. • Ameku Takao no Suiri Karte • Nihon e Youkoso Elf-san • SK∞ Extra Part.</div>
+            <div class="patch-item">List uplod anime list anime. ~ Ygaks.</div>
+        </div>
+        
+        <div class="date-label">-- 20 MARCH 2025</div>
+        <div class="card">
+            <h3><i class="material-icons">notifications_active</i> UPDATE WEBS</h3>
+            <div class="patch-item">PLIXNIMEKU early acces beta for simple ui dengan update fitur list of animes.</div>
+            <div class="patch-item">Kami berterimakasih telah mendukung dari nol kami selalu ada untuk anda.</div>
+        </div>
+    </div>
+
+    <script>
+        function goToWatchPage(url) { window.location.href = url; }
+    </script>
+</body>
+</html>
