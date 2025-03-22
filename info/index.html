@@ -17,7 +17,7 @@
         .navbar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; display: flex; background-color: #222; color: #fff; align-items: center; justify-content: space-between; padding: 0 10px; z-index: 100; }
         .navbar .title { font-size: 18px; font-weight: bold; }
         .navbar .title .blue-text { color: #78a3c3; }
-        .navbar .menu { font-size: 24px; }
+        .navbar-menu{display:flex;align-items:center;gap:10px}.menu-item{display:flex;align-items:center;background:#333;padding:8px 12px;border-radius:8px;transition:background .3s}.menu-item:hover{background:#444}.menu-item .material-icons{font-size:18px;color:#ddd}.separator{width:2px;height:16px;background:#555;margin:0 6px}.menu-text{font-size:13px;font-weight:bold;color:#ddd}
 
         .grid-container { display: grid; gap: 15px; }
         .card { background: #2A2E37; padding: 15px; text-align: left; }
@@ -34,8 +34,19 @@
 <body>
     <div class="navbar">
         <div class="title">PLIXN<span class="blue-text">IMEKU!</span></div>
-        <span class="menu material-icons" onclick="goToWatchPage('https://plixsmp.my.id/')">dashboard</span>
+        <div class="navbar-menu">
+        <div class="menu-item" onclick="goToWatchPage('/')">
+            <span class="material-icons">home</span>
+            <div class="separator"></div>
+            <span class="menu-text">HOME</span>
+        </div>
+        <div class="menu-item" onclick="goToWatchPage('update')">
+            <span class="material-icons">sync_alt</span>
+            <div class="separator"></div>
+            <span class="menu-text">PATCH</span>
+        </div>
     </div>
+</div>
 
     <div class="grid-container">
         <div class="card">
