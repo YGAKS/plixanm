@@ -14,289 +14,26 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <!-- Styles -->
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            user-select: none;
-        }
-        body {
-            background-color: #1E1E1E;
-            color: #fff;
-            padding: 10px;
-            padding-top: 50px;
-        }
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            display: flex;
-            background: #1E1E1E;
-            color: #fff;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 10px;
-            z-index: 100;
-        }
-        .navbar .title {
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .navbar .title .blue-text {
-            color: #78a3c3;
-        }
-.navbar-menu {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.menu-item {
-    display: flex;
-    align-items: center;
-    background: #333;
-    padding: 8px 12px;
-    border-radius: 8px;
-    transition: background 0.3s;
-}
-
-.menu-item:hover {
-    background: #444;
-}
-
-.menu-item .material-icons {
-    font-size: 18px;
-    color: #ddd;
-}
-
-.separator {
-    width: 2px;
-    height: 16px;
-    background: #555;
-    margin: 0 6px;
-}
-
-.menu-text {
-    font-size: 13px;
-    font-weight: bold;
-    color: #ddd;
-}
-        
-        .search-container {
-            display: flex;
-            align-items: center;
-            border-radius: 8px;
-            background: #333;
-            padding: 5px 10px;
-            margin: 10px 0;
-        }
-        
-        .search-container input {
-            border: none;
-            outline: none;
-            background: transparent;
-            color: #ccc;
-            padding: 5px 10px;
-            font-size: 14px;
-            width: 100%;
-        }
-    
-.category-list {
-    display: flex;
-    justify-content: center;
-    border-radius: 8px;
-    align-items: center;
-    width: 100%;
-    background-color: #333;
-    color: #ccc;
-    font-size: 14px;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-.category-list a {
-    color: #ccc;
-    cursor: none;
-    text-decoration: none;
-    padding: 10px 20px;
-    white-space: nowrap;
-    flex: 1;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.category-list a:not(:last-child) {
-    border-right: 2px solid #555;
-}
-
-.category-list a:hover {
-    color: white;
-}
-
-.category-list a.active {
-    background-color: #555;
-    color: white;
-}
-
-
-
-        @keyframes slideLight {
-            0% { background-position: -100% 0; }
-            100% { background-position: 100% 0; }
-        }
-        .anime-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            width: 100%;
-            overflow: hidden;
-            justify-content: left;
-            margin-bottom: 10px;
-        }
-        
-        .anime-item {
-            position: relative;
-            display: flex;
-            flex-grow: 1;
-            flex-direction: column;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            max-width: 110px;
-            width: 100px;
-            overflow: hidden;
-            background: linear-gradient(90deg, #2A2E37 20%, #454A55 50%, #2A2E37 80%);
-            background-size: 200% 100%;
-            animation: slideLight 2s linear infinite;
-        }
-        
-        .anime-item img {
-            height: 140px;
-            width: 100%;
-            object-fit: cover;
-            background: linear-gradient(90deg, #2A2E37 20%, #454A55 50%, #2A2E37 80%);
-            background-size: 200% 100%;
-            animation: slideLight 0.5s linear infinite;
-            opacity: 0;
-            transform: scale(0.8);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        }
-        
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(10px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-      
-        .anime-item img, .anime-title {
-            opacity: 0;
-            transform: translateY(5px);
-            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-         }
-         
-         .stats-container {
-           opacity: 0;
-           transition: opacity 0.8s ease-out;
-         }
-         
-        .anime-title {
-            font-size: 12px;
-            font-weight: bold;
-            color: #fff;
-            max-width: 100%;
-            white-space: nowrap;
-            padding: 5px;
-            overflow: hidden;
-            background-color: #1E1E1E;
-            text-overflow: ellipsis;
-        }
-        
-        .stats-container {
-            display: flex;
-            align-items: center;
-            color: #ccc;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            background: linear-gradient(to bottom, #222, rgba(0, 0, 0, 0));
-            font-size: 10px;
-            font-weight: bold;
-            padding: 5px 5px 30px;
-            z-index: 100;
-        }
-        
-        .stats {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            display: inline-block;
-        }
-        
-        .populer {
-            background-color: #28a745;
-        }
-        
-        .toprated {
-            background-color: #ffc107;
-        }
-        
-        .news {
-            background-color: #fd7e14;
-        }
-        
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #78a3c3;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        
-        .scroll-to-top.show {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        input[type="search"]::-webkit-search-cancel-button {
-            filter: brightness(0) invert(1);
-        }
-    </style>
+    <style>html{scroll-behavior:smooth}*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;user-select:none}body{background-color:#1E1E1E;color:#fff;padding:10px;padding-top:50px}.navbar{position:fixed;top:0;left:0;width:100%;height:60px;display:flex;background:#1E1E1E;color:#fff;align-items:center;justify-content:space-between;padding:0 10px;z-index:100}.navbar .title{font-size:20px;font-weight:bold}.navbar .title .blue-text{color:#78a3c3}.navbar-menu{display:flex;align-items:center;gap:10px}.menu-item{display:flex;align-items:center;background:#333;padding:8px 12px;border-radius:8px;transition:background .3s}.menu-item:hover{background:#444}.separator{width:2px;height:16px;background:#555;margin:0 6px}.menu-text{font-size:13px;font-weight:bold;color:#ddd}.search-container{display:flex;align-items:center;border-radius:8px;background:#333;padding:5px 10px;margin:10px 0}.search-container input{border:none;outline:none;background:transparent;color:#ccc;padding:5px 10px;font-size:14px;width:100%}.category-list{display:flex;justify-content:center;border-radius:8px;align-items:center;width:100%;background-color:#333;color:#ccc;font-size:14px;overflow:hidden;margin-bottom:10px}.category-list a{color:#ccc;cursor:none;text-decoration:none;padding:10px 20px;white-space:nowrap;flex:1;text-align:center;display:flex;align-items:center;justify-content:center}.category-list a:not(:last-child){border-right:2px solid #555}.category-list a:hover{color:white}.category-list a.active{background-color:#555;color:white}@keyframes slideLight{0%{background-position:-100% 0}100%{background-position:100% 0}}.anime-list{display:flex;flex-wrap:wrap;gap:10px;width:100%;overflow:hidden;justify-content:left;margin-bottom:10px}.anime-item{position:relative;display:flex;flex-grow:1;flex-direction:column;box-shadow:0 2px 5px rgba(0,0,0,.1);max-width:110px;width:100px;overflow:hidden;background:linear-gradient(90deg,#2A2E37 20%,#454A55 50%,#2A2E37 80%);background-size:200% 100%;animation:slideLight 2s linear infinite}.anime-item img{height:140px;width:100%;object-fit:cover;background:linear-gradient(90deg,#2A2E37 20%,#454A55 50%,#2A2E37 80%);background-size:200% 100%;animation:slideLight .5s linear infinite;opacity:0;transform:scale(.8);transition:opacity .5s ease-out,transform .5s ease-out}@keyframes fadeIn{0%{opacity:0;transform:translateY(10px)}100%{opacity:1;transform:translateY(0)}}.anime-item img,.anime-title{opacity:0;transform:translateY(5px);transition:opacity .3s ease-out,transform .3s ease-out}.stats-container{opacity:0;transition:opacity .8s ease-out}.anime-title{font-size:12px;font-weight:bold;color:#fff;max-width:100%;white-space:nowrap;padding:5px;overflow:hidden;background-color:#1E1E1E;text-overflow:ellipsis}.stats-container{display:flex;align-items:center;color:#ccc;position:absolute;top:0;width:100%;background:linear-gradient(to bottom,#222,rgba(0,0,0,0));font-size:10px;font-weight:bold;padding:5px 5px 30px;z-index:100}.stats{width:10px;height:10px;border-radius:50%;display:inline-block}.populer{background-color:#28a745}.toprated{background-color:#ffc107}.news{background-color:#fd7e14}.scroll-to-top{position:fixed;bottom:20px;right:20px;background:#78a3c3;color:white;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;opacity:0;visibility:hidden;transition:opacity .3s,transform .3s,visibility .3s;box-shadow:0 4px 8px rgba(0,0,0,.2)}.scroll-to-top.show{opacity:1;visibility:visible}input[type="search"]::-webkit-search-cancel-button{filter:brightness(0) invert(1)}img{-webkit-user-drag:none;-webkit-touch-callout:none;user-select:none;pointer-events:none;}</style>
 </head>
 <body>
 
     <!-- Navbar -->
 <div class="navbar">
-    <div class="title">PLIXN<span class="blue-text">IMEKU!</span></div>
-    <div class="navbar-menu">
-        <div class="menu-item" onclick="goToWatchPage('info')">
-            <span class="material-icons">error_outline</span>
-            <div class="separator"></div>
-            <span class="menu-text">INFO</span>
-        </div>
-        <div class="menu-item" onclick="goToWatchPage('update')">
-            <span class="material-icons">sync_alt</span>
-            <div class="separator"></div>
-            <span class="menu-text">PATCH</span>
+        <div class="title">PLIXN<span class="blue-text">IMEKU!</span></div>
+        <div class="navbar-menu">
+            <div class="menu-item" onclick="goToWatchPage('info')">
+                <span class="menu-text">!</span>
+                <div class="separator"></div>
+                <span class="menu-text">INFO</span>
+            </div>
+            <div class="menu-item" onclick="goToWatchPage('update')">
+                <span class="menu-text">+</span>
+                <div class="separator"></div>
+                <span class="menu-text">PATCH</span>
+            </div>
         </div>
     </div>
-</div>
     
     <div class="search-container">
     <input type="search" id="searchInput" placeholder="PENCARIAN MASUKAN JUDUL ANIME..." oninput="searchAnime()">
@@ -311,62 +48,62 @@
     <div class="anime-list">
       
         <div class="anime-item" onclick="goToWatchPage('anime/kuroiwa.html')"><div class="stats-container"><span class="stats news"></span>Ongoing 1-12</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx177552-JPx2rIXeprne.jpg" alt="Anime 1">
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx177552-JPx2rIXeprne.jpg" alt="">
             <div class="anime-title">Kuroiwa Medaka ni Watashi no Kawaii ga Tsuujinai</div>
         </div>
 
         <div class="anime-item" onclick="goToWatchPage('anime/kiminokoto.html')"><div class="stats-container"><span class="stats news"></span>Ongoing 1-12</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx172258-CFvhqor0blLV.jpg" alt="Anime 2">
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx172258-CFvhqor0blLV.jpg" alt="">
             <div class="anime-title">Kimi no Koto ga Dai Dai Dai Dai Daisuki na 100-nin no Kanojo 2nd Season</div>
         </div>
 
         <div class="anime-item" onclick="goToWatchPage('anime/honeylemonsoda.html')"><div class="stats-container"><span class="stats news"></span>Ongoing 1-12</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx175443-yeamxYxCwLSe.jpg" alt="Anime 3">
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx175443-yeamxYxCwLSe.jpg" alt="">
             <div class="anime-title">Honey Lemon Soda</div>
         </div>
 
         <div class="anime-item" onclick="goToWatchPage('anime/hanawasaku.html')"><div class="stats-container"><span class="stats news"></span>Ongoing 1-12</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx178022-gB3zAfazGBJ6.jpg" alt="Anime 4">
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx178022-gB3zAfazGBJ6.jpg" alt="">
             <div class="anime-title">Hana wa Saku, Shura no Gotoku</div>
         </div>
 
         <div class="anime-item" onclick="goToWatchPage('anime/sakamotodays.html')"><div class="stats-container"><span class="stats news"></span>Completed 1-11</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx177709-jBQ965JZG0l8.png" alt="Anime 5">
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx177709-jBQ965JZG0l8.png" alt="">
             <div class="anime-title">SAKAMOTO DAYS</div>
         </div>
 
         <div class="anime-item" onclick="goToWatchPage('anime/kusuriyano.html')"><div class="stats-container"><span class="stats news"></span><span class="stats populer"></span>Ongoing 1-24</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176301-AclxpmzlKoBM.jpg" alt="Anime 6">
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176301-AclxpmzlKoBM.jpg" alt="">
             <div class="anime-title">Kusuriya no Hitorigoto</div>
         </div>
         
         <div class="anime-item" onclick="goToWatchPage('anime/classnodaikirai.html')"><div class="stats-container"><span class="stats populer"></span>Completed 1-12</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx178462-YW6BgSGGP4az.jpg" alt="Anime 7">
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx178462-YW6BgSGGP4az.jpg" alt="">
             <div class="anime-title">Class no Daikirai na Joshi to Kekkon Suru Koto ni Natta</div>
         </div>
         
         <div class="anime-item" onclick="goToWatchPage('anime/zenshuu.html')"><div class="stats-container"><span class="stats news"></span></span>Ongoing 1-12</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176273-whKlFCswinEm.jpg" alt="Anime 8">
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176273-whKlFCswinEm.jpg" alt="">
             <div class="anime-title">Zenshuu</div>
         </div>
         
         <div class="anime-item" onclick="goToWatchPage('anime/guildnouketsukejou.html')"><div class="stats-container"><span class="stats news"></span></span>Ongoing 1-12</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx167143-SoFo5kOvlkbO.jpg" alt="Anime 9">
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx167143-SoFo5kOvlkbO.jpg" alt="">
             <div class="anime-title">Guild no Uketsukejou desu ga, Zangyou wa Iya nanode Boss wo Solo Toubatsu Shiyou to Omoimasu</div>
         </div>
         
         <div class="anime-item" onclick="goToWatchPage('anime/amekutakaono.html')"><div class="stats-container"><span class="stats news"></span></span>Ongoing 1-12</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176642-lgDtPlodCMRm.jpg" alt="Anime 10">
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176642-lgDtPlodCMRm.jpg" alt="">
             <div class="anime-title">Ameku Takao no Suiri Karte</div>
         </div>
         
         <div class="anime-item" onclick="goToWatchPage('anime/nihoneyoukoso.html')"><div class="stats-container"><span class="stats news"></span></span>Ongoing 1-12</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx172439-sTda7baXB0Fh.jpg" alt="Anime 11">
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx172439-sTda7baXB0Fh.jpg" alt="">
             <div class="anime-title">Nihon e Youkoso Elf-san</div>
         </div>
         
         <div class="anime-item" onclick="goToWatchPage('anime/extrapart.html')"><div class="stats-container"><span class="stats news"></span></span>Completed 1</div>
-            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx136381-t6c5rfKjnqqd.jpg" alt="Anime 12">
+            <img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx136381-t6c5rfKjnqqd.jpg" alt="">
             <div class="anime-title">SK∞ Extra Part</div>
         </div>
     </div>
@@ -374,34 +111,6 @@
         <span class="material-icons">arrow_upward</span>
     </div>
     <!-- JavaScript -->
-    <script>
-        function goToWatchPage(url) {
-            window.location.href = url;
-        }
-    </script><script>
-function goToWatchPage(a){window.location.href=a}
-function searchAnime(){
-    let a=document.getElementById("searchInput").value.toLowerCase(),
-        b=document.querySelectorAll(".anime-item");
-    b.forEach(b=>{let c=b.querySelector(".anime-title").textContent.toLowerCase();
-    b.style.display=c.includes(a)?"flex":"none"});
-    document.querySelectorAll(".category-list a").forEach(a=>a.classList.remove("active"));
-    document.querySelector(".category-list a").classList.add("active");
-}
-const scrollTopBtn=document.getElementById("scrollTopBtn");
-window.addEventListener("scroll",()=>{window.scrollY>300?scrollTopBtn.classList.add("show"):scrollTopBtn.classList.remove("show")});
-scrollTopBtn.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})});
-
-function filterAnime(a,b){
-    document.querySelectorAll(".anime-item").forEach(c=>{
-        let d=null!==c.querySelector(`.stats.${a}`);
-        c.style.display="all"===a?"flex":d?"flex":"none"});
-    document.querySelectorAll(".category-list a").forEach(a=>a.classList.remove("active"));
-    b.classList.add("active");
-}
-document.addEventListener("DOMContentLoaded",()=>document.querySelector(".category-list a").click());
-</script><script>
-document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelectorAll(".anime-item"),t=new IntersectionObserver(t=>{t.forEach((t,n)=>{if(t.isIntersecting){let i=.15*n;t.target.style.opacity="1",t.target.style.transform="translateY(0)",t.target.style.transitionDelay=i+"s";let o=t.target.querySelector("img"),r=t.target.querySelector(".anime-title"),a=t.target.querySelector(".stats-container");setTimeout(()=>{o.style.opacity="1",o.style.transform="translateY(0)"},1e3*(i+.3)),setTimeout(()=>{a.style.opacity="1"},1e3*(i+.5)),setTimeout(()=>{r.style.opacity="1",r.style.transform="translateY(0)"},1e3*(i+.7))}})},{threshold:.2});e.forEach(e=>t.observe(e))});
-</script>
+    <script>function goToWatchPage(a){window.location.href=a}function searchAnime(){let a=document.getElementById("searchInput").value.toLowerCase(),b=document.querySelectorAll(".anime-item");b.forEach(b=>{let c=b.querySelector(".anime-title").textContent.toLowerCase();b.style.display=c.includes(a)?"flex":"none"});document.querySelectorAll(".category-list a").forEach(a=>a.classList.remove("active"));document.querySelector(".category-list a").classList.add("active")}const scrollTopBtn=document.getElementById("scrollTopBtn");window.addEventListener("scroll",()=>{window.scrollY>300?scrollTopBtn.classList.add("show"):scrollTopBtn.classList.remove("show")});scrollTopBtn.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})});function filterAnime(a,b){document.querySelectorAll(".anime-item").forEach(c=>{let d=null!==c.querySelector(`.stats.${a}`);c.style.display="all"===a?"flex":d?"flex":"none"});document.querySelectorAll(".category-list a").forEach(a=>a.classList.remove("active"));b.classList.add("active")}document.addEventListener("DOMContentLoaded",()=>{document.querySelector(".category-list a").click();let e=document.querySelectorAll(".anime-item"),t=new IntersectionObserver(t=>{t.forEach((t,n)=>{if(t.isIntersecting){let i=.15*n;t.target.style.opacity="1",t.target.style.transform="translateY(0)",t.target.style.transitionDelay=i+"s";let o=t.target.querySelector("img"),r=t.target.querySelector(".anime-title"),a=t.target.querySelector(".stats-container");setTimeout(()=>{o.style.opacity="1",o.style.transform="translateY(0)"},1e3*(i+.3)),setTimeout(()=>{a.style.opacity="1"},1e3*(i+.5)),setTimeout(()=>{r.style.opacity="1",r.style.transform="translateY(0)"},1e3*(i+.7))}})},{threshold:.2});e.forEach(e=>t.observe(e))});</script>
 </body>
 </html>
