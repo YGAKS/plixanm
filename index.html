@@ -46,23 +46,54 @@
             z-index: 100;
         }
         .navbar .title {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
         }
         .navbar .title .blue-text {
             color: #78a3c3;
         }
-        .navbar .menu {
-            font-size: 24px;
-            transition: .3s;
-            cursor: pointer;
-        }
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    background: #333;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.menu-item:hover {
+    background: #444;
+}
+
+.menu-item .material-icons {
+    font-size: 18px;
+    color: #ddd;
+}
+
+.separator {
+    width: 2px;
+    height: 16px;
+    background: #555;
+    margin: 0 6px;
+}
+
+.menu-text {
+    font-size: 13px;
+    font-weight: bold;
+    color: #ddd;
+}
         
         .search-container {
             display: flex;
             align-items: center;
-            background: #333;
             border-radius: 8px;
+            background: #333;
             padding: 5px 10px;
             margin: 10px 0;
         }
@@ -112,7 +143,7 @@
 }
 
 .category-list a.active {
-    background-color: #78a3c3;
+    background-color: #555;
     color: white;
 }
 
@@ -182,6 +213,7 @@
             white-space: nowrap;
             padding: 5px;
             overflow: hidden;
+            background-color: #1E1E1E;
             text-overflow: ellipsis;
         }
         
@@ -250,10 +282,21 @@
 <body>
 
     <!-- Navbar -->
-    <div class="navbar">
-        <div class="title">PLIXN<span class="blue-text">IMEKU!</span></div>
-        <span class="menu material-icons" onclick="goToWatchPage('info')">info_outline</span>
+<div class="navbar">
+    <div class="title">PLIXN<span class="blue-text">IMEKU!</span></div>
+    <div class="navbar-menu">
+        <div class="menu-item" onclick="goToWatchPage('info')">
+            <span class="material-icons">error_outline</span>
+            <div class="separator"></div>
+            <span class="menu-text">INFO</span>
+        </div>
+        <div class="menu-item" onclick="goToWatchPage('update')">
+            <span class="material-icons">sync_alt</span>
+            <div class="separator"></div>
+            <span class="menu-text">PATCH</span>
+        </div>
     </div>
+</div>
     
     <div class="search-container">
     <input type="search" id="searchInput" placeholder="PENCARIAN MASUKAN JUDUL ANIME..." oninput="searchAnime()">
@@ -261,8 +304,8 @@
 
     <div class="category-list">
     <a href="#" onclick="filterAnime('all', this)">ALL</a>
-    <a href="#" onclick="filterAnime('populer', this)">POPULER</a>
-    <a href="#" onclick="filterAnime('toprated', this)">TOP RATED</a>
+    <a href="#" onclick="filterAnime('populer', this)">POPULAR</a>
+    <a href="#" onclick="filterAnime('toprated', this)">TOP RATE</a>
     <a href="#" onclick="filterAnime('news', this)">NEWS</a>
 </div>
     <div class="anime-list">
