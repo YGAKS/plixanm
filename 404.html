@@ -2,28 +2,39 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-<meta name="google" content="notranslate">
+    <meta name="google" content="notranslate">
     <html translate="no">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="refresh" content="5">
     <title>404 - kuru kuru halaman belum tersedia atau tidak ada</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;user-select:none}body{background:#222;color:#fff;text-align:center;padding:10px;padding-top:60px}.navbar{position:fixed;top:0;left:0;width:100%;height:60px;display:flex;background:#222;color:#fff;align-items:center;justify-content:space-between;padding:0 10px;z-index:100}.navbar .title{font-size:18px;font-weight:bold}.navbar .title .blue-text{color:#78a3c3}.navbar .menu{font-size:24px;transition:.3s}.error-container{max-width:600px;margin:100px auto 0}.error-text{font-size:16px;margin-bottom:20px}.anime-thumbnail{width:150px;height:auto;margin-bottom:20px}.btn-home{display:inline-block;padding:10px 20px;background:#78a3c3;color:#fff;text-decoration:none;border-radius:5px;transition:.3s}.anime-thumbnail{pointer-events:none;-webkit-user-drag:none;}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;user-select:none}body{background:#222;color:#fff;text-align:center;padding:10px;padding-top:60px}.navbar{position:fixed;top:0;left:0;width:100%;height:60px;display:flex;background:#222;color:#fff;align-items:center;justify-content:space-between;padding:0 10px;z-index:100}.navbar .title{font-size:20px;font-weight:bold}.navbar .title .blue-text{color:#78a3c3}.navbar-menu{display:flex;align-items:center;gap:10px}.menu-item{display:flex;align-items:center;background:#333;padding:8px 12px;border-radius:8px;transition:background .3s}.menu-item:hover{background:#444}.separator{width:2px;height:16px;background:#555;margin:0 6px}.menu-text{font-size:13px;font-weight:bold;color:#ddd}.error-container{max-width:600px;margin:100px auto 0}.error-text{font-size:16px;margin-bottom:20px}.loading{width:150px;height:auto;margin-bottom:20px}.btn-home{display:inline-block;padding:10px 20px;background:#333;color:#ddd;text-decoration:none;border-radius:5px;transition:.3s}.anime-thumbnail{pointer-events:none;-webkit-user-drag:none}
     </style>
 </head>
 <body>
     <div class="navbar">
         <div class="title">PLIXN<span class="blue-text">IMEKU!</span></div>
-        <span class="menu material-icons" onclick="goToWatchPage('https://plixsmp.my.id/info')">info_outline</span>
+        <div class="navbar-menu">
+            <div class="menu-item" onclick="goToWatchPage('info')">
+                <span class="menu-text">!</span>
+                <div class="separator"></div>
+                <span class="menu-text">INFO</span>
+            </div>
+            <div class="menu-item" onclick="goToWatchPage('update')">
+                <span class="menu-text">+</span>
+                <div class="separator"></div>
+                <span class="menu-text">PATCH</span>
+            </div>
+        </div>
     </div>
     <div class="error-container">
-        <img class="anime-thumbnail" src="https://media.tenor.com/0bNCyjlohGQAAAAi/honkai-star-rail-hsr.gif" alt="Error Anime">
+        <img class="loading" src="https://media.tenor.com/0bNCyjlohGQAAAAi/honkai-star-rail-hsr.gif" alt="Error Anime">
         <div class="error-text">kuru kuru! Halaman sedang perbaikan atau tidak ada! resfreh untuk mengecek.</div>
         <br>
-        <a href="https://plixsmp.my.id/" class="btn-home">Kembali ke Beranda</a>
-    </div><script>function goToWatchPage(url){window.location.href=url;}</script>
+        <div class="btn-home" onclick="goToWatchPage('https://plixsmp.my.id/')">Kembali ke Beranda</div>
+    </div>
+    <script>function goToWatchPage(a){window.location.href=a}</script>
 </body>
 </html>
